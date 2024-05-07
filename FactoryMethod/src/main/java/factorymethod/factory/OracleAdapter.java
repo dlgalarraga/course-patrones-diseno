@@ -22,7 +22,7 @@ public class OracleAdapter implements IDBAdapter{
         try {
             String urlConnection = getConnectionString();
             String user = "system";
-            String password = "1234";
+            String password = "pmq2010";
             Connection connection = DriverManager.getConnection(urlConnection, user, password);
             System.out.println("Connection class => " + connection.getClass().getCanonicalName());
             return connection;

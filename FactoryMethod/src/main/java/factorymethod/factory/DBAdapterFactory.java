@@ -13,16 +13,16 @@ public class DBAdapterFactory {
     private static final String DB_TYPE = "dbadaptertype";
     
     
-    public static IDBAdapter getAdapter(DBType type){
-        switch (type){
-            case ORACLE:
-                return new OracleAdapter();
-            case MYSQL:
-                return new MySQLAdapter();
-            default:
-                return null;
-        }
-    }
+   // public static IDBAdapter getAdapter(DBType type){
+   //     switch (type){
+   //         case ORACLE:
+   //             return new OracleAdapter();
+   //         case MYSQL:
+   //             return new MySQLAdapter();
+   //         default:
+   //             return null;
+   //     }
+   // }
     
     public static IDBAdapter getAdapter(){
         try {

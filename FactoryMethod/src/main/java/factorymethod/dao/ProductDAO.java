@@ -19,10 +19,12 @@ public class ProductDAO {
     
     public ProductDAO(){
         adapter = DBAdapterFactory.getAdapter();
+        System.out.println("definición =>");
     }
     
     public void saveProduct(Product product){
         try {
+            System.out.println("definición 2 =>");
             String sql = "insert into productos values (?,?,?)";
             Connection connection = adapter.getConnection();
             PreparedStatement statement = connection.prepareStatement(sql);
@@ -30,6 +32,7 @@ public class ProductDAO {
             statement.setString(2, product.getName());
             statement.setDouble(3, product.getPrice());
             statement.executeUpdate();
+            connection.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -51,7 +54,7 @@ public class ProductDAO {
                 Product current = new Product(id, name, price);
                 products.add(current);
             }
-            
+            connection.close();
             return products;
         } catch (Exception e) {
             e.printStackTrace();

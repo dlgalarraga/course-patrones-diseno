@@ -11,15 +11,15 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         
-        Product product1 = new Product(3l, "Producto 2", 30);
+        Product product1 = new Product(11l, "Producto 11", 110);
         
         ProductDAO dao = new ProductDAO();
-        //dao.saveProduct(product1);
+        dao.saveProduct(product1);
         
-        List<Product> allProducts = dao.getAllProducts();
-        for(Product current : allProducts){
-            System.out.println(current);
-        }
+       // List<Product> allProducts = dao.getAllProducts();
+       // for(Product current : allProducts){
+       //    System.out.println(current);
+       }
         
         
     }

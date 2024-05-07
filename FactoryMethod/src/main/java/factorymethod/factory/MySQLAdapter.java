@@ -10,16 +10,17 @@ public class MySQLAdapter implements IDBAdapter{
     
     static{
         try {
-            new com.mysql.jdbc.Driver();
+            new com.mysql.cj.jdbc.Driver();
         } catch (Exception e) {}
     }
 
     @Override
     public Connection getConnection() {
         try {
+            System.out.println("vino a mysql =>");
             String connectionString = getConnectionString();
             String user = "root";
-            String password = "1234";
+            String password = "G4l4rr4g3#";
             Connection connection = DriverManager.getConnection(connectionString, user, password);
             System.out.println("Connection class => " + connection.getClass().getCanonicalName());
             return connection;
@@ -31,6 +32,6 @@ public class MySQLAdapter implements IDBAdapter{
     
     
     private String getConnectionString(){
-        return "jdbc:mysql://localhost:3306/patterns?zeroDateTimeBehavior=convertToNull&serverTimezone=UTC";
+        return "jdbc:mysql://localhost:3306/edata?zeroDateTimeBehavior=convertToNull&serverTimezone=UTC";
     }
 }
