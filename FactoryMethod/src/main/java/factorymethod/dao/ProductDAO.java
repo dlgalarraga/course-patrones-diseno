@@ -19,7 +19,6 @@ public class ProductDAO {
     
     public ProductDAO(){
         adapter = DBAdapterFactory.getAdapter();
-        System.out.println("definición =>");
     }
     
     public void saveProduct(Product product){

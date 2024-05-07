@@ -16,9 +16,9 @@ public class Main {
         ProductDAO dao = new ProductDAO();
         dao.saveProduct(product1);
         
-       // List<Product> allProducts = dao.getAllProducts();
-       // for(Product current : allProducts){
-       //    System.out.println(current);
+        List<Product> allProducts = dao.getAllProducts();
+        for(Product current : allProducts){
+        System.out.println(current);
        }
         
         
